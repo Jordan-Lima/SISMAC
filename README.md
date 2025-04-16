@@ -1,3 +1,4 @@
+
 # SISMAC - Sistema de Cadastro e Gerenciamento de MACs  
 [![Java](https://img.shields.io/badge/Java-21-blue.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1-green.svg)](https://spring.io/projects/spring-boot)
@@ -10,10 +11,14 @@
 
 ---
 
-## 🔗 Repositórios
+## 📁 Estrutura do Projeto
 
-- 🔙 **Backend (Spring Boot)**: [github.com/seu-usuario/sismac-backend](https://github.com/jordan-lima/sismac/backend)  
-- 🎨 **Frontend (Angular)**: [github.com/seu-usuario/sismac-frontend](https://github.com/jordan-lima/sismac/frontend)
+```
+SISMAC/
+├── Backend/      → Aplicação Spring Boot (Java 21)
+├── Frontend/     → Aplicação Angular
+└── README.md
+```
 
 ---
 
@@ -49,10 +54,9 @@
 ### 📦 Backend (Spring Boot)
 
 ```bash
-git clone https://github.com/jordan-lima/sismac/backend.git
-cd sismac-backend
+cd Backend
 
-# Configure o arquivo application.properties
+# Configure o application.properties
 # e execute:
 ./mvnw spring-boot:run
 ```
@@ -60,8 +64,7 @@ cd sismac-backend
 ### 🖥️ Frontend (Angular)
 
 ```bash
-git clone https://github.com/jordan-lima/sismac/frontend.git
-cd sismac-frontend
+cd Frontend
 
 npm install
 ng serve
@@ -82,32 +85,6 @@ CREATE DATABASE sismac;
 | Usuário | Senha     | Papel |
 |---------|-----------|-------|
 | admin   | admin123  | ADMIN |
-
----
-
-## 📁 Estrutura do Projeto
-
-### Backend
-
-```
-src/
-├── controller/
-├── service/
-├── repository/
-├── model/
-├── config/            # Spring Security configs
-└── integration/       # Comunicação com a API UniFi
-```
-
-### Frontend
-
-```
-src/
-├── app/
-│   ├── components/
-│   ├── services/
-│   ├── pages/
-```
 
 ---
 
