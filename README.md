@@ -12,8 +12,8 @@
 
 ## 🔗 Repositórios
 
-- 🔙 **Backend (Spring Boot)**: [github.com/seu-usuario/sismac-backend](https://github.com/seu-usuario/sismac-backend)  
-- 🎨 **Frontend (Angular)**: [github.com/seu-usuario/sismac-frontend](https://github.com/seu-usuario/sismac-frontend)
+- 🔙 **Backend (Spring Boot)**: [github.com/seu-usuario/sismac-backend](https://github.com/jordan-lima/sismac/backend)  
+- 🎨 **Frontend (Angular)**: [github.com/seu-usuario/sismac-frontend](https://github.com/jordan-lima/sismac/frontend)
 
 ---
 
