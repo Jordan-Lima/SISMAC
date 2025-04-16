@@ -49,7 +49,7 @@
 ### 📦 Backend (Spring Boot)
 
 ```bash
-git clone https://github.com/seu-usuario/sismac-backend.git
+git clone https://github.com/jordan-lima/sismac/backend.git
 cd sismac-backend
 
 # Configure o arquivo application.properties
@@ -60,7 +60,7 @@ cd sismac-backend
 ### 🖥️ Frontend (Angular)
 
 ```bash
-git clone https://github.com/seu-usuario/sismac-frontend.git
+git clone https://github.com/jordan-lima/sismac/frontend.git
 cd sismac-frontend
 
 npm install
