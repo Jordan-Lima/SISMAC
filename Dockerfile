@@ -16,7 +16,7 @@ RUN rm -rf src
 COPY . .
 
 # Compila o binário final em modo release
-RUN cargo build --release
+RUN cargo build --release --verbose
 
 # === 2. Runtime stage ===
 FROM debian:bookworm-slim AS runtime
