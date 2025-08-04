@@ -1,5 +1,5 @@
 # 1. Build stage com Rust
-FROM rust:1.70 as builder
+FROM rust:1.88 as builder
 
 # Define o diretório de trabalho dentro do contêiner.
 WORKDIR /usr/src/mac_cadastro
