@@ -1,5 +1,4 @@
 # === 1. Build stage ===
-# Usa a imagem oficial do Rust baseada no Debian Bookworm, compatível com glibc 2.37+
 FROM rust:1.88-slim-bookworm AS builder
 
 # Define o diretório de trabalho no contêiner
@@ -19,27 +18,24 @@ COPY . .
 # Compila o binário final em modo release
 RUN cargo build --release
 
----
-
 # === 2. Runtime stage ===
-# Usa imagem Debian Bookworm Slim, compatível com binários modernos
 FROM debian:bookworm-slim AS runtime
 
-# Instala bibliotecas necessárias para execução (libssl3 e certificados SSL)
+# Instala bibliotecas necessárias para execução
 RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
 
-# Copia o binário do estágio anterior para o caminho final
+# Copia o binário do estágio anterior
 COPY --from=builder /usr/src/mac_cadastro/target/release/mac_cadastro /usr/local/bin/mac_cadastro
 
-# Define variáveis de ambiente da aplicação
+# Define variáveis de ambiente
 ENV RUST_LOG=info
 
-# Expõe a porta padrão da aplicação
+# Expõe a porta usada pela aplicação
 EXPOSE 8080
 
-# Adiciona um usuário sem privilégios para rodar a aplicação com mais segurança
+# Executa como usuário sem privilégios (boa prática)
 RUN useradd -m appuser
 USER appuser
 
-# Comando padrão de execução da aplicação
+# Comando padrão
 CMD ["mac_cadastro"]
